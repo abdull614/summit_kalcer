@@ -1,0 +1,68 @@
+/* Popup Modal */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  width: 300px;
+}
+
+.jumlah-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0;
+  gap: 1rem;
+}
+
+.jumlah-control button {
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  border: none;
+  background-color: var(--primary);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.jumlah-control span {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.popup-buttons {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1.5rem;
+}
+
+.popup-buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#btn-konfirmasi {
+  background-color: var(--primary);
+  color: white;
+}
+
+#btn-batal {
+  background-color: #ccc;
+}
