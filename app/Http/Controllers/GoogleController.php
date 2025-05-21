@@ -45,6 +45,9 @@ class GoogleController extends Controller
                         'google_id' => $googleUser->getId(),
                         'password' => bcrypt(Str::random(16)), // password random karena login lewat Google
                     ]);
+
+                    // Assign role customer
+                    $user->assignRole('Customer');
                 }
             }
 
