@@ -1,3 +1,8 @@
+@php
+    $judulParts = explode(' ', $jumbotron->judul ?? 'Judul Default');
+@endphp
+
+
 @extends('layouts.app')
 
 @section('custom-css')
@@ -6,9 +11,15 @@
 
 @section('content')
     <!-- Hero Section Header -->
-    <section class="hero" id="katalogProduk">
+    <section class="hero" id="katalogProduk"
+        style="background-image: url('{{ asset('storage/' . ($jumbotron->picture ?? 'default.jpg')) }}');">
         <main class="content">
-            <h1>Cara Sewa Summit <span>Kalcer.</span></h1>
+            <h1>
+                <span class="text-white">{{ $judulParts[0] ?? '' }}</span>
+                <span class="text-primary">{{ $judulParts[3] ?? '' }}</span>
+            </h1>
+
+            <p>{{ $jumbotron->value ?? '' }}</p>
         </main>
     </section>
     <!-- Hero Section Header End -->

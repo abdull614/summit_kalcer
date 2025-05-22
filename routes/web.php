@@ -3,6 +3,7 @@
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\CaraSewaController;
 use App\Http\Controllers\GoogleController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\DB;
@@ -26,8 +27,12 @@ Route::get('/login', [
     PageController::class, 'login'
     ]) ->name('login');
 
+// Route::get('/cara_sewa', [
+//     PageController::class, 'caraSewa'
+//     ])->name('cara.sewa');
+
 Route::get('/cara_sewa', [
-    PageController::class, 'caraSewa'
+    CaraSewaController::class, 'caraSewa'
     ])->name('cara.sewa');
 
 // Route::get('/katalog_produk', [

@@ -1,12 +1,25 @@
+<?php
+    $judulParts = explode(' ', $jumbotron->judul ?? 'Judul Default');
+?>
+
+
+
+
 <?php $__env->startSection('custom-css'); ?>
     <link rel="stylesheet" href="<?php echo e(asset('css/caraSewa.css')); ?>">
 <?php $__env->stopSection(); ?>
 
 <?php $__env->startSection('content'); ?>
     <!-- Hero Section Header -->
-    <section class="hero" id="katalogProduk">
+    <section class="hero" id="katalogProduk"
+        style="background-image: url('<?php echo e(asset('storage/' . ($jumbotron->picture ?? 'default.jpg'))); ?>');">
         <main class="content">
-            <h1>Cara Sewa Summit <span>Kalcer.</span></h1>
+            <h1>
+                <span class="text-white"><?php echo e($judulParts[0] ?? ''); ?></span>
+                <span class="text-primary"><?php echo e($judulParts[3] ?? ''); ?></span>
+            </h1>
+
+            <p><?php echo e($jumbotron->value ?? ''); ?></p>
         </main>
     </section>
     <!-- Hero Section Header End -->
